@@ -21,7 +21,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 
 /* BUTTONS */
 .btn{padding:12px 30px;border-radius:30px;font-size:14px;transition:all 0.3s ease;}
-.btn-outline{border:1px solid var(--purple);color:var(--purple);}
+.btn-outline{border:1px solid var(--purple);color:var(--purple);margin-top: 5px;}
 .btn-primary{background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;}
 .btn-white{background:#fff;color:var(--purple);}
 .btn:hover{transform:translateY(-3px);}
