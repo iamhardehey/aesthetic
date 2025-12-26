@@ -14,19 +14,20 @@ body{
   background:var(--bg);
   color:var(--text);
   line-height:1.7;
+  overflow-x:hidden;
 }
 .container{width:90%;max-width:1100px;margin:auto;}
 
 /* HEADER */
 .header{
-  position:sticky;
+  position: sticky;
   top:0;
   z-index:1000;
-  background:#fff;
-  border-bottom:1px solid #e5d0f0;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 .header.scrolled{
-  box-shadow:0 10px 30px rgba(155,89,182,.2);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
 }
 .header-flex{
   display:flex;
@@ -37,7 +38,7 @@ body{
 .logo{
   font-family:'Playfair Display',serif;
   font-size:26px;
-  color:var(--purple);
+  color:#fff;
 }
 
 /* NAV */
@@ -48,7 +49,10 @@ body{
 .nav a{
   margin-left:25px;
   text-decoration:none;
-  color:var(--dark);
+  color:#fff;
+}
+.nav a:hover{
+  opacity:0.85;
 }
 
 /* HAMBURGER */
@@ -61,7 +65,7 @@ body{
 .hamburger span{
   width:26px;
   height:3px;
-  background:var(--purple);
+  background:#fff;
 }
 
 /* BUTTONS */
@@ -72,8 +76,8 @@ body{
   text-decoration:none;
 }
 .btn-outline{
-  border:1px solid var(--purple);
-  color:var(--purple);
+  border:1px solid #fff;
+  color:#fff;
 }
 .btn-primary{
   background:linear-gradient(135deg,var(--purple),var(--pink));
@@ -107,6 +111,7 @@ body{
   position:relative;
   color:#fff;
   text-align:center;
+  max-width:380px;
 }
 
 /* SECTIONS */
@@ -141,7 +146,7 @@ body{
   margin-bottom:15px;
 }
 
-/* OFFER PRICE */
+/* PRICE */
 .offer-card .price{
   display:block;
   margin-top:15px;
@@ -172,35 +177,60 @@ body{
 }
 
 /* FOOTER */
-.footer {
-  background: #fff;
-  padding: 50px 0;
-  text-align: center;
-  border-top: 1px solid #e5d0f0;
+.footer{
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+  padding:60px 0;
+  text-align:center;
+  color:#fff;
+}
+.footer p{
+  color:#fff;
+  font-size:14px;
+  margin-bottom:10px;
+}
+.footer .connect a{
+  color:#fff;
+  font-weight:500;
+  text-decoration:none;
+  margin:0 8px;
+  transition: opacity 0.3s ease;
+}
+.footer .connect a:hover{
+  opacity:0.8;
 }
 
-.footer p {
-  font-size: 14px;
-  color: var(--text);
-  margin-bottom: 10px;
+/* WHATSAPP */
+.whatsapp-btn{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:var(--pink);
+  color:#fff;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  box-shadow:0 12px 25px rgba(0,0,0,.25);
 }
 
-.footer .connect {
-  margin-top: 15px;
+/* ANIMATIONS */
+.fade-up,.fade-down{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease-out;
 }
-
-.footer .connect a {
-  text-decoration: none;
-  color: var(--purple);
-  font-weight: 500;
-  margin: 0 6px;
-  transition: color 0.3s ease;
+.scroll-img{
+  opacity:0;
+  transform:scale(0.95);
+  transition:all 0.8s ease-out;
 }
-
-.footer .connect a:hover {
-  color: var(--pink);
+.scroll-visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
 }
-
 
 /* MOBILE */
 @media(max-width:768px){
@@ -217,9 +247,5 @@ body{
   }
   .nav.active{display:flex;}
   .hamburger{display:flex;}
-
-  .hero-circle{
-    width:420px;
-    height:420px;
-  }
+  .hero-circle{width:420px;height:420px;}
 }
