@@ -118,7 +118,7 @@ body{
   max-width:380px;
 }
 .hbtn {
-  margin-top: 120px;
+  margin-top: 100px;
   padding: 20px 20px;
 }
 
@@ -252,16 +252,23 @@ body{
   display: block;
   gap: 16px;
   align-items: center;
+  background: none;
 }
 
-.connect img {
-  width: 22px;
-  height: 22px;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.connect .icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #333; /* default color */
+  transition: transform 0.3s ease, fill 0.3s ease;
 }
 
-.connect a:hover img {
+.connect .icon:hover svg {
+  fill: #1da1f2; /* Twitter blue example for hover */
   transform: scale(1.2);
-  opacity: 0.75;
 }
+
+/* Optional: different hover colors for each icon */
+.connect .icon:nth-child(1):hover svg { fill: #1da1f2; } /* Twitter */
+.connect .icon:nth-child(2):hover svg { fill: #0077b5; } /* LinkedIn */
+.connect .icon:nth-child(3):hover svg { fill: #e1306c; } /* Instagram */
+
