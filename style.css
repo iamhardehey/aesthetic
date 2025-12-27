@@ -118,8 +118,8 @@ body{
   max-width:380px;
 }
 .hbtn {
-  margin-top: 60px;
-  border-radius: 20px;
+  margin-top: 120px;
+  padding: 20px 20px;
 }
 
 /* SECTIONS */
@@ -246,4 +246,22 @@ body{
     display:flex;
   }
   .hero-circle{width:420px;height:420px;}
+}
+
+.connect {
+  display: block;
+  gap: 16px;
+  align-items: center;
+}
+
+.connect img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.connect a:hover img {
+  transform: scale(1.2);
+  opacity: 0.75;
 }
